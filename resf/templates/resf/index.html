@@ -1,0 +1,11 @@
+{% extends 'resf/base_template.html' %}
+{% block content %}
+<div class="form-container">
+	<div><h1>Query Form</h1></div>
+	<hr style="color: rgb(0,0,0); width: 100%;">
+<div class="form-group" style="padding-bottom: 10px"><form method="POST">{% csrf_token %}
+		{{ form.as_p }}
+		<center><input type="submit" name="submit" class="btn btn-light"></center>
+	</form></div>
+</div>
+{% endblock%}
